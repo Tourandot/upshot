@@ -1,0 +1,2 @@
+include ':upshot'
+rootProject.name='upshot-parent'
