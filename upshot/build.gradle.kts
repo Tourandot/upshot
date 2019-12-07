@@ -3,9 +3,12 @@ plugins {
 }
 
 dependencies {
+    val retrofitVersion: String by extra
+    val okhttpVersion: String by extra
+
     implementation(kotlin("stdlib")) // version is set by the plugin
-    implementation("com.squareup.retrofit2:retrofit:${extra["retrofitVersion"]}")
-    implementation("com.squareup.okhttp3:okhttp:${extra["okhttpVersion"]}")
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.okhttp3:okhttp:$okhttpVersion")
 
     testImplementation("junit:junit:4.12")
     testImplementation("com.squareup.okhttp3:mockwebserver:4.2.1")
