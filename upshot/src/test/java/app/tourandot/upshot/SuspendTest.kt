@@ -27,16 +27,10 @@ class SuspendTest {
             .baseUrl(mockServer.url("/"))
             .addConverterFactory(StringConverterFactory())
             .addCallAdapterFactory(
-                UpshotCallAdapterFactory(
-                    forType = ResultWithValue::class,
-                    mapper = ResultWithValueMapper()
-                )
+                UpshotCallAdapterFactory.createWithMapper(ResultWithValueMapper())
             )
             .addCallAdapterFactory(
-                UpshotCallAdapterFactory(
-                    forType = ResultWithNoValue::class,
-                    mapper = ResultWithNoValueMapper()
-                )
+                UpshotCallAdapterFactory.createWithMapper(ResultWithNoValueMapper())
             )
             .build()
 

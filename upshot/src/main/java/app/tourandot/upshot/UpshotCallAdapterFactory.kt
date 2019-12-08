@@ -11,6 +11,12 @@ class UpshotCallAdapterFactory<T : Any>(
     private val forType: KClass<T>,
     private val mapper: UpshotMapper<T>
 ) : CallAdapter.Factory() {
+    companion object {
+        inline fun <reified T : Any> createWithMapper(mapper: UpshotMapper<T>): UpshotCallAdapterFactory<T> {
+            return UpshotCallAdapterFactory(T::class, mapper)
+        }
+    }
+
     override fun get(
         returnType: Type,
         annotations: Array<Annotation>,
