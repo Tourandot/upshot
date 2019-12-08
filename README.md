@@ -3,7 +3,7 @@ Retrofit Call Adapter that converts return types of retrofit API definitions int
 
 
 ## Installation
-`implementation("app.tourandot:upshot:0.0.2")`
+`implementation("app.tourandot:upshot:0.0.3")`
 
 ## Usage
 See tests for the sample usage.
