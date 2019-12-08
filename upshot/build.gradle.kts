@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm")
 }
+apply(from = rootProject.file("maven-publish.gradle"))
 
 dependencies {
     val retrofitVersion: String by extra

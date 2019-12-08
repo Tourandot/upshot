@@ -2,7 +2,6 @@ plugins {
     `build-scan`
     kotlin("jvm") version "1.3.60"
 }
-apply(from = rootProject.file("maven-publish.gradle"))
 
 allprojects {
     repositories {
